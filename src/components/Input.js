@@ -5,12 +5,12 @@ export default function Input({ setMin, setTimerStatus, setCurrentTime }) {
   const [message, setMessage] = React.useState(null);
 
   const startTimer = () => e => {
-    if (num != null) {
+    if (num != null && num > 0) {
       setTimerStatus('running');
       setCurrentTime(0);
       setMin(num);
     } else {
-      setMessage('Please enter a number.');
+      setMessage('Please enter a positive number.');
     }
   }
 

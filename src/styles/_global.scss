@@ -8,6 +8,7 @@ body {
 
 .blink {
   animation: blinker 1s linear infinite;
+  color: red;
 }
 
 @keyframes blinker {
@@ -55,11 +56,6 @@ button, .button {
 
 input[type='radio'] {
   display: none;
-
-  &[checked] + button {
-    background-color: #52af77;
-    color: #fff;
-  }
 }
 
 .countdown-box {
@@ -119,7 +115,14 @@ input[type='radio'] {
     label {
       font-family: Arial-black;
       font-size: 150px;
-      padding-right: 50px;
+
+      &.red {
+        color: red;
+      }
+    }
+
+    button {
+      margin-left: 50px;
     }
   }
 
@@ -144,7 +147,7 @@ input[type='radio'] {
       outline: none;
       margin: 0px 10px;
 
-      &:hover {
+      &:hover, &.checked {
         background-color: #52af77;
         color: #fff;
       }

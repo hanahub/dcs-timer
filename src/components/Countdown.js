@@ -20,7 +20,7 @@ export default function Countdown() {
     return () => {
       clearInterval(timerId);
     }
-  });
+  }, [timerStatus, min, currentTime, currentSpeed]);
 
   return (
     <div className="countdown-box">
@@ -30,7 +30,7 @@ export default function Countdown() {
         setCurrentTime={setCurrentTime}
       />
 
-      {timerStatus === 'running' && <Message
+      {timerStatus !== 'initial' && <Message
         min={min}
         currentTime={currentTime}
       />}

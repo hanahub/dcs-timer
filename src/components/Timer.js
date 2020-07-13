@@ -28,7 +28,7 @@ export default function Timer(props) {
       setTimerStatus('running');
     }
   }
-  console.log(timerStatus);
+
   return (
     <div className="timer">
       <label className={timeClassName()}>{getTimerText()}</label>

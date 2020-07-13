@@ -2,11 +2,7 @@ import React from 'react';
 
 export default function Speed(props) {
   const { speeds, currentSpeed, setCurrentSpeed } = props;
-  console.log(currentSpeed);
-  const handleSpeedChange = s => e => {
-    setCurrentSpeed(s);
-  }
-
+  
   const handleSpeedButtonChange = s => e => {
     setCurrentSpeed(s);
   }
@@ -18,11 +14,9 @@ export default function Speed(props) {
           <input
             name="speed"
             type="radio"
-            onChange={handleSpeedChange(s)}
             value={s}
-            checked={currentSpeed === s}
           />
-          <button onClick={handleSpeedButtonChange(s)}>{s}X</button>
+          <button className={currentSpeed === s ? 'checked' : ''} onClick={handleSpeedButtonChange(s)}>{s}X</button>
         </div>
       ))}
     </div>
