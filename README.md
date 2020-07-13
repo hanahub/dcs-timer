@@ -11,6 +11,7 @@ In the project directory, you can run:
 Runs the app in the development mode.<br />
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 
+Live demo app can be viewed [here](http://296e536d1e72.ngrok.io)
 ## Screenshots
 
 ![alt text](https://glohbal.com/wp-content/dcs/1.png)
